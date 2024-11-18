@@ -1,0 +1,5 @@
+- [[Audience Persona Pattern]]
+- [[Cognitive Verifier Pattern]]
+- [[Flipped Interaction Pattern]]
+-  [[Persona Pattern]]
+-  [[Question Refinement Pattern]]
