@@ -11,12 +11,8 @@ The **Template Pattern** is an effective strategy for guiding a large language m
     
     - Use Markdown or similar formatting guides, as models like ChatGPT render outputs in Markdown for bold, italics, headings, etc.
     - For instance, you might set up:
-        
-        plaintext
-        
-        Copy code
-        
-        `***Question***: QUESTION ***Answer***: ANSWER`
+        `***Question***: QUESTION 
+        ***Answer***: ANSWER`
         
     - In this setup:
         - `***Question***` and `***Answer***` are structural text that will remain.
@@ -70,3 +66,26 @@ Another scenario is summarizing biographies:
 - **Sophisticated Matching**: Enables the model to recognize and organize information meaningfully (like extracting names or roles).
 
 Using the Template Pattern, you can achieve a high level of consistency and relevancy in responses, perfect for structured documents, question generation, content summaries, and more.
+
+# Format of the Template Pattern
+
+To use this pattern, your prompt should make the following fundamental contextual statements:
+
+- I am going to provide a template for your output
+    
+- X is my placeholder for content
+    
+- Try to fit the output into one or more of the placeholders that I list
+    
+- Please preserve the formatting and overall template that I provide
+    
+- This is the template: PATTERN with PLACEHOLDERS
+    
+
+You will need to replace "X" with an appropriate placeholder, such as "CAPITALIZED WORDS" or "<PLACEHOLDER>". You will then need to specify a pattern to fill in, such as "Dear <FULL NAME>" or "NAME, TITLE, COMPANY".
+
+Examples:
+
+- Create a random strength workout for me today with complementary exercises. I am going to provide a template for your output . CAPITALIZED WORDS are my placeholders for content. Try to fit the output into one or more of the placeholders that I list. Please preserve the formatting and overall template that I provide. This is the template: NAME, REPS @ SETS, MUSCLE GROUPS WORKED, DIFFICULTY SCALE 1-5, FORM NOTES
+    
+- Please create a grocery list for me to cook macaroni and cheese from scratch, garlic bread, and marinara sauce from scratch. I am going to provide a template for your output . <placeholder> are my placeholders for content. Try to fit the output into one or more of the placeholders that I list. Please preserve the formatting and overall template that I provide. This is the template: Aisle <name of aisle>: <item needed from aisle>, <qty> (<dish(es) used in>
